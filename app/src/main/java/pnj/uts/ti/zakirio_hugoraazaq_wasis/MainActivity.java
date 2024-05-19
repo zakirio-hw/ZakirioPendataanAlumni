@@ -1,6 +1,7 @@
 package pnj.uts.ti.zakirio_hugoraazaq_wasis;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        String email = "admin@zakirio.com";
+        String NIM = "2207411039";
+        String nama = "Zakirio Hugoraazaq Wasis";
+        String kelas = "TI-4B";
+
         emailTxt = findViewById(R.id.emailText);
         pwdTxt = findViewById(R.id.passwordText);
         Button loginBtn = findViewById(R.id.loginBtn);
@@ -41,9 +47,17 @@ public class MainActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (emailTxt.getText().toString().equals("admin@zakirio.com") && pwdTxt.getText().toString().equals("admin")) {
+                if (emailTxt.getText().toString().equals(email) && pwdTxt.getText().toString().equals("admin")) {
                     Intent intent = new Intent(MainActivity.this, Dashboard.class);
                     startActivity(intent);
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("SharedPref_Profile", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("email", email);
+                    editor.putString("NIM", NIM);
+                    editor.putString("nama", nama);
+                    editor.putString("kelas", kelas);
+                    editor.apply();
                 }
                 else {
                     failedLbl.setText("Login Gagal");
