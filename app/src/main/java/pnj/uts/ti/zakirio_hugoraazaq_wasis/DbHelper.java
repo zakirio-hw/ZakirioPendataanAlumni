@@ -55,7 +55,7 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void addBook(String nim, String nama, String tmpt_lahir, String tgl_lahir, String alamat, String agama, String tlp, String thn_masuk, String thn_lulus, String pekerjaan, String jabatan) {
+    void addAlumni(String nim, String nama, String tmpt_lahir, String tgl_lahir, String alamat, String agama, String tlp, String thn_masuk, String thn_lulus, String pekerjaan, String jabatan) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 

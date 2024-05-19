@@ -1,9 +1,11 @@
 package pnj.uts.ti.zakirio_hugoraazaq_wasis;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,11 +28,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView nimLbl, namaLbl;
+        LinearLayout mainLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             nimLbl = itemView.findViewById(R.id.nimLbl);
             namaLbl = itemView.findViewById(R.id.namaLbl);
+            mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
 
@@ -44,8 +48,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.nimLbl.setText("NIM: " + String.valueOf(nim.get(position)));
-        holder.namaLbl.setText("NIM: " + String.valueOf(nama.get(position)));
+        holder.nimLbl.setText(String.format(String.valueOf(nim.get(position))));
+        holder.namaLbl.setText(String.format(String.valueOf(nama.get(position))));
     }
 
     @Override

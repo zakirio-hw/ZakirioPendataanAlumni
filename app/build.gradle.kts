@@ -16,6 +16,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -35,6 +36,7 @@ android {
 
 dependencies {
 
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -46,14 +48,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-    //Scalable Size
-    //implementation("com.intuit.sdp:sdp-android:1.0.6")
-    //implementation("com.intuit.ssp:ssp-android:1.0.6")
-
-    //Circular Image
-    //implementation("de.hdodenhof:circleimageview:3.1.0")
-
-    //Image Crop Dependency
-    //implementation("com.theartofdev.edmodo:android-image-cropper:2.8.+")
 }

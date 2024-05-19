@@ -27,11 +27,15 @@ public class DataAlumni extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_data_alumni);
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        recyclerView.findViewById(R.id.recycler_view);
 
         helper = new DbHelper(DataAlumni.this);
         nim = new ArrayList<>();
@@ -47,12 +51,13 @@ public class DataAlumni extends AppCompatActivity {
     void storeDataInArrays() {
         Cursor cursor = helper.readAllData();
         if (cursor.getCount() == 0) {
-
+            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 nim.add(cursor.getString(0));
                 nama.add(cursor.getString(1));
             }
+            Toast.makeText(this, "Got " + nim.size() + " data.", Toast.LENGTH_SHORT).show();
         }
     }
 }
