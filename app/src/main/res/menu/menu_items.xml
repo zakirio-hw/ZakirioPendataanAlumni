@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/add_icon"
+        android:id="@+id/navTambahData"
+        android:title="Tambah Data"/>
+
+    <item
+        android:icon="@drawable/alumni_icon"
+        android:id="@+id/navDataAlumni"
+        android:title="Data Alumni"/>
+
+    <item
+        android:icon="@drawable/logout_icon"
+        android:id="@+id/navLogout"
+        android:title="Logout"/>
+</menu>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TambahData">
+
+    <EditText
+        android:id="@+id/txtNIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:hint="NIM"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Nama"
+        app:layout_constraintTop_toBottomOf="@id/txtNIM"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtTmptLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Tempat Lahir"
+        app:layout_constraintTop_toBottomOf="@id/txtNama"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtTglLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textSize="20sp"
+        android:hint="Tanggal Lahir"
+        app:layout_constraintTop_toBottomOf="@id/txtTmptLahir"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Alamat"
+        app:layout_constraintTop_toBottomOf="@id/txtTglLahir"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtAgama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Agama"
+        app:layout_constraintTop_toBottomOf="@id/txtAlamat"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtTlp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Tlp/Hp"
+        app:layout_constraintTop_toBottomOf="@id/txtAgama"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtThnMasuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Tahun Masuk"
+        app:layout_constraintTop_toBottomOf="@id/txtTlp"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtThnLulus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Tahun Lulus"
+        app:layout_constraintTop_toBottomOf="@id/txtThnMasuk"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtPekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Pekerjaan"
+        app:layout_constraintTop_toBottomOf="@id/txtThnLulus"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <EditText
+        android:id="@+id/txtJabatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Jabatan"
+        app:layout_constraintTop_toBottomOf="@id/txtPekerjaan"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="#000000"
+        android:text="Simpan"
+        app:layout_constraintTop_toBottomOf="@id/txtJabatan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
